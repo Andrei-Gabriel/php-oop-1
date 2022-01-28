@@ -2,9 +2,9 @@
     require_once __DIR__.'/classes/movie.php';
 
     $movies = [
-        new Movie("Gran Torino", 2008, "1h 56m", 8.1, "Clint Eastwood"/*, (array)$attori*/),
-        new Movie("Il fotografo di Mauthausen", 2018, "1h 50m", 6.8, "Mar Targarona"/*, (array)$attori*/),
-        new Movie("V per Vendetta", 2005, "2h 12m", 8.1, "James McTeigue"/*, (array)$attori*/)
+        new Movie("Gran Torino", 2008, "1h 56m", 8.1, "Clint Eastwood", ['Clint Eastwood', 'Bee Vang', 'Christopher Carley', 'Chuck Norris']),
+        new Movie("Il fotografo di Mauthausen", 2018, "1h 50m", 6.8, "Mar Targarona", ['Mario Casas', 'Richard van Weyden', 'Alain Hernández']),
+        new Movie("V per Vendetta", 2005, "2h 12m", 8.1, "James McTeigue", ['Hugo Weaving', 'Natalie Portman', 'Rupert Graves'])
     ];
 ?>
 
@@ -26,15 +26,13 @@
                 <li>Durata: <?php echo $movie->time?></li>
                 <li>Voto: <?php echo $movie->IsABeautifulFilm()?></li>
                 <li>Regista: <?php echo $movie->director?></li>
-                <!-- <li>Lista attori:
+                <li>Lista attori: 
                     <ul>
-                        <?php // foreach($movies as $movie){ ?>
-                            <?php // foreach($movie as $actors => $attori){ ?>
-                                <li></li>
-                            <?php // } ?>
-                        <?php // } ?>
+                        <?php foreach($movie->attori as $attore){ ?>
+                            <li><?php echo $attore?> </li>
+                        <?php } ?>
                     </ul>
-                </li> -->
+                </li>
             </ul>
         </div>
     <?php } ?>
