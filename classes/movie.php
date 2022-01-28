@@ -17,7 +17,9 @@
 
         public function IsABeautifulFilm() {
             if($this->IMDbRating >= 8){
-                $this->IMDbRating = $this->IMDbRating. ' BEAUTIFUL';
+                return $this->IMDbRating = $this->IMDbRating. ' BEAUTIFUL';
+            } else {
+                return $this->IMDbRating;
             }
         }
     }
