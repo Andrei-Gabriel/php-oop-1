@@ -3,8 +3,8 @@
     require_once __DIR__.'/classes/movie.php';
 
     $movies = [
-        new Movie("Gran Torino", 2008, "1h 56m", 8.1, "Clint Eastwood")
-        new Movie("Il fotografo di Mauthausen", 2018, "1h 50m", 6.8, "Mar Targarona")
+        new Movie("Gran Torino", 2008, "1h 56m", 8.1, "Clint Eastwood"),
+        new Movie("Il fotografo di Mauthausen", 2018, "1h 50m", 6.8, "Mar Targarona"),
         new Movie("V per Vendetta", 2005, "2h 12m", 8.1, "James McTeigue")
     ];
 ?>
